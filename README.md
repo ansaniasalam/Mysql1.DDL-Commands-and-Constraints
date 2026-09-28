@@ -1,62 +1,38 @@
-# mysql-ddl-commands-and-constraints
+# mysql ddl commands and constraints
 
 # MySQL Employee Database: DDL Commands and Constraints
 
+This practice covers creating and managing a MySQL employee database. It includes DDL commands for working with databases and tables, along with constraints that help keep stored data accurate and consistent.
+
 ## DDL Commands
 
-### 1. Table Creation (`CREATE`)
+### Database and Table Creation
 
-Write the SQL statements to create a database named `employee` and the following tables based on the provided schema:
+Created the `employee` database and its `Departments`, `Location`, and `Employees` tables using the provided schema.
 
-- Departments
-- Location
-- Employees
+### Table Alteration
 
-### 2. Table Alteration (`ALTER`)
+Practiced changing the `Employees` table after its creation by adding a column, modifying a column’s data type, removing a column, and renaming a column.
 
-Write SQL statements to alter the table structure as follows:
+### Table Renaming
 
-- Add a new column named `email` to the `Employees` table to store employee email addresses.
-- Modify the data type of the `designation` column in the `Employees` table to support a wider range of values.
-- Drop the `age` column from the `Employees` table.
-- Rename the `hire_date` column to `date_of_joining`.
+Renamed the department and location tables to practice changing table names.
 
-### 3. Table Renaming (`RENAME`)
+### Truncating and Dropping
 
-Rewrite the SQL statements to rename the following tables:
-
-- Rename `Departments` to `Departments_Info`.
-- Rename `Location` to `Locations`.
-
-### 4. Table Truncation (`TRUNCATE`)
-
-Write an SQL statement to truncate the `Employees` table.
-
-### 5. Database and Table Dropping (`DROP`)
-
-Write SQL statements to drop the `Employees` table and then the `employee` database.
+Used `TRUNCATE` to remove table data and `DROP` to remove a table or database.
 
 ## Constraints
 
-### 1. Database Recreation
+Recreated the database and applied constraints to protect data integrity:
 
-Drop the `employee` database if it exists, then recreate it using the provided schema. Ensure all tables are created with the appropriate constraints described below.
+- **Departments:** Used a primary key for department IDs and required department names to be present and unique.
+- **Location:** Used automatically generated IDs and required location names to be present and unique.
+- **Employees:** Required unique employee IDs and employee names, restricted gender values to `M` or `F`, and required employees to be at least 18 years old.
+- **Defaults and relationships:** Set the hire date to default to the current date and linked employees to valid departments and locations with foreign keys.
 
-### 2. Departments Table
+## Tables
 
-- Ensure `department_id` uniquely identifies each department.
-- Add constraints to prevent `department_name` from being null or duplicated.
-
-### 3. Location Table
-
-- Automatically generate unique, sequential identifiers for each location.
-- Prevent null or duplicate locations.
-
-### 4. Employees Table
-
-- Ensure each employee has a unique identifier.
-- Require an employee name.
-- Limit `gender` values to `M` or `F`.
-- Require the employee's age to be at least 18.
-- Set the current date as the default for `hire_date` when no date is specified.
-- Link `department_id` and `location_id` in the `Employees` table to their respective tables.
+- `Departments` stores department IDs and names.
+- `Location` stores location IDs and names.
+- `Employees` stores employee details, including their department and location references.
