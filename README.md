@@ -6,7 +6,7 @@ This SQL script contains hands-on exercises on defining and managing a database 
 
 The database and tables were created based on the given schema.
 
-- Schema diagram: [Employee Database Schema]()
+- Schema diagram: [Employee Database Schema](employee-database-schema.png)
 - SQL script: [DDL_Commands_and_Constraints.sql](DDL_Commands_and_Constraints.sql)
 
 ## Concepts Used
