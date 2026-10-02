@@ -1,4 +1,4 @@
-# SQL 1: DDL Commands and Constraints - Employee Database
+# DDL Commands and Constraints
 
 This SQL script contains hands-on exercises on defining and managing a database structure. It demonstrates how to create, alter, rename, truncate and drop databases and tables, and how to enforce data integrity using constraints.
 
@@ -7,7 +7,7 @@ This SQL script contains hands-on exercises on defining and managing a database 
 The database and tables were created based on the given schema.
 
 - Schema diagram: [Employee Database Schema](employee-database-schema.png)
-- SQL script: [DDL_Commands_and_Constraints.sql](DDL_Commands_and_Constraints.sql)
+- SQL script: [DDL_Commands_and_Constraints.sql](DDL-Commands-and-Constraints.sql)
 
 ## Concepts Used
 
@@ -84,5 +84,5 @@ Open the `.sql` file in MySQL Workbench (or any MySQL client) and run the statem
 To run it from a terminal instead, use:
 
 ```bash
-mysql -u root -p < "DDL_Commands_and_Constraints.sql"
+mysql -u root -p < "DDL-Commands-and-Constraints.sql"
 ```
